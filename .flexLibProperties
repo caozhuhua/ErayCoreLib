@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.eray.base.utils.excel.ErayExcelDataHelper"/>
+    <classEntry path="com.eray.base.utils.excel.managers.BaseSheetsManager"/>
+    <classEntry path="com.eray.base.debug.Console"/>
+    <classEntry path="com.eray.base.utils.excel.managers.Activity_ActivityMainManager"/>
+    <classEntry path="com.eray.base.utils.excel.managers.DotaSheetsNameData"/>
+    <classEntry path="com.eray.base.utils.Utilities"/>
+    <classEntry path="com.eray.base.data.EXPHashMap"/>
+    <classEntry path="com.eray.base.utils.core.GC"/>
+    <classEntry path="com.eray.base.loader.EXPLoaderManager"/>
+    <classEntry path="com.eray.base.core.IEXPCore"/>
+    <classEntry path="com.eray.base.core.IEXPScene"/>
+    <classEntry path="com.eray.base.core.IEXPWin"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
