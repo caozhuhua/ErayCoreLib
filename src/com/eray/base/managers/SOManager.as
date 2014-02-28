@@ -1,6 +1,6 @@
 package com.eray.base.managers
 {
-	import com.eray.base.data.EXPConstans;
+	import com.eray.base.data.EXPConstants;
 	import com.eray.base.utils.EXPLogger;
 	
 	import flash.events.EventDispatcher;
@@ -18,11 +18,11 @@ package com.eray.base.managers
 		}
 		public function initialize():void{
 			try{
-				so = SharedObject.getLocal(EXPConstans.LOCAL_SO_FILE_NA,"/");
+				so = SharedObject.getLocal(EXPConstants.LOCAL_SO_FILE_NA,"/");
 				if(so){
 					so.addEventListener(NetStatusEvent.NET_STATUS,onNetStatusHandler);
 					try{
-						so.flush(EXPConstans.LOCAL_SO_BUFFER_SIZE);
+						so.flush(EXPConstants.LOCAL_SO_BUFFER_SIZE);
 					}catch(error:Error){
 						EXPLogger.log("flush:",error.toString());
 					}
@@ -37,10 +37,10 @@ package com.eray.base.managers
 			// TODO Auto-generated method stub
 			EXPLogger.log(event.info.codde);
 			switch (event.info.code){
-				case EXPConstans.LOCAL_SO_STATUS_SUCCESS:
+				case EXPConstants.LOCAL_SO_STATUS_SUCCESS:
 					
 					break;
-				case EXPConstans.LOCAL_SO_STATUS_FAILED:
+				case EXPConstants.LOCAL_SO_STATUS_FAILED:
 					
 					break;
 			}
@@ -52,7 +52,7 @@ package com.eray.base.managers
 		public function getData(key:String):SODataVO{
 			return null;
 		}
-		public function hasData(key:String,ver:String=EXPConstans.LOCAL_SO_DATA_DEFAULT_VER):Boolean{
+		public function hasData(key:String,ver:String=EXPConstants.LOCAL_SO_DATA_DEFAULT_VER):Boolean{
 			return false;
 		}
 		public function removeData(key:String):SODataVO{

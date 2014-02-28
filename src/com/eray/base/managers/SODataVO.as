@@ -1,6 +1,6 @@
 package com.eray.base.managers
 {
-	import com.eray.base.data.EXPConstans;
+	import com.eray.base.data.EXPConstants;
 
 	public class SODataVO
 	{
@@ -40,7 +40,7 @@ package com.eray.base.managers
 		{
 			_ver = value;
 		}
-		static public function create(key:String,data:*,ver:String = EXPConstans.LOCAL_SO_DATA_DEFAULT_VER):SODataVO{
+		static public function create(key:String,data:*,ver:String = EXPConstants.LOCAL_SO_DATA_DEFAULT_VER):SODataVO{
 			var vo:SODataVO = new SODataVO();
 			vo.key = key;
 			vo.data = data;

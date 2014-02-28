@@ -1,8 +1,8 @@
 package com.eray.base.data
 {
-	public class EXPConstans
+	public class EXPConstants
 	{
-		public function EXPConstans()
+		public function EXPConstants()
 		{
 		}
 		public static const LOCAL_SO_FILE_NA:String = "dota.pps.tv";
