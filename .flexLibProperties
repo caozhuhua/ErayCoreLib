@@ -13,6 +13,14 @@
     <classEntry path="com.eray.base.core.IEXPCore"/>
     <classEntry path="com.eray.base.core.IEXPScene"/>
     <classEntry path="com.eray.base.core.IEXPWin"/>
+    <classEntry path="com.eray.base.managers.EXPLocalDataManger"/>
+    <classEntry path="com.eray.base.core.IEXPManager"/>
+    <classEntry path="com.eray.base.managers.SOManager"/>
+    <classEntry path="com.eray.base.data.EXPConstans"/>
+    <classEntry path="com.eray.base.utils.EXPLogger"/>
+    <classEntry path="com.eray.base.managers.MemoryManager"/>
+    <classEntry path="com.eray.base.net.loader.EXPLoaderCore"/>
+    <classEntry path="com.eray.base.managers.SODataVO"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
