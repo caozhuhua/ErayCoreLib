@@ -47,9 +47,12 @@ package com.eray.base.managers
 		}
 		
 		public function putData(vo:SODataVO):void{
-			
+			if(so){
+				removeData(vo.key);
+				so.data[vo.key] = {"key":vo.key,"ver":vo.ver,"data":vo.data};
+			}
 		}
-		public function getData(key:String):SODataVO{
+		public function getData(key:String,ver:String=EXPConstants.LOCAL_SO_DATA_DEFAULT_VER):SODataVO{
 			return null;
 		}
 		public function hasData(key:String,ver:String=EXPConstants.LOCAL_SO_DATA_DEFAULT_VER):Boolean{

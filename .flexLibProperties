@@ -21,6 +21,13 @@
     <classEntry path="com.eray.base.managers.MemoryManager"/>
     <classEntry path="com.eray.base.net.loader.EXPLoaderCore"/>
     <classEntry path="com.eray.base.managers.SODataVO"/>
+    <classEntry path="com.eray.base.core.ModuleComponent"/>
+    <classEntry path="com.eray.base.core.IEXPModule"/>
+    <classEntry path="com.eray.PipeAwareModule"/>
+    <classEntry path="com.eray.base.loader.EXPModuleLoader"/>
+    <classEntry path="com.eray.base.data.EXPFileVO"/>
+    <classEntry path="com.eray.base.utils.EXPGuid"/>
+    <classEntry path="com.eray.base.loader.IEXPCoreLoader"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
