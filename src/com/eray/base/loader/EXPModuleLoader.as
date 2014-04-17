@@ -10,6 +10,8 @@ package com.eray.base.loader
 	import flash.net.URLLoader;
 	import flash.net.URLLoaderDataFormat;
 	import flash.net.URLRequest;
+	import flash.system.ApplicationDomain;
+	import flash.system.LoaderContext;
 	import flash.utils.ByteArray;
 	
 	import org.osflash.signals.Signal;
