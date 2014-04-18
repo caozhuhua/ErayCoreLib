@@ -1,4 +1,4 @@
-package com.eray.base.loader
+package com.eray.base.net.loader
 {
 	import com.eray.base.core.IEXPCore;
 	

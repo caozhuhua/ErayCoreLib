@@ -1,7 +1,7 @@
 package com.eray.base.core
 {
-	public interface IEXPCore
+	public interface IEXPCore extends IEXPDispose
 	{
-		function  dispose():void;
+		
 	}
 }

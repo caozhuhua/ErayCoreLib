@@ -9,7 +9,7 @@
     <classEntry path="com.eray.base.utils.Utilities"/>
     <classEntry path="com.eray.base.data.EXPHashMap"/>
     <classEntry path="com.eray.base.utils.core.GC"/>
-    <classEntry path="com.eray.base.loader.EXPLoaderManager"/>
+    <classEntry path="com.eray.base.net.loader.EXPLoaderManager"/>
     <classEntry path="com.eray.base.core.IEXPCore"/>
     <classEntry path="com.eray.base.core.IEXPScene"/>
     <classEntry path="com.eray.base.core.IEXPWin"/>
@@ -19,15 +19,19 @@
     <classEntry path="com.eray.base.data.EXPConstants"/>
     <classEntry path="com.eray.base.utils.EXPLogger"/>
     <classEntry path="com.eray.base.managers.MemoryManager"/>
-    <classEntry path="com.eray.base.net.loader.EXPLoaderCore"/>
     <classEntry path="com.eray.base.managers.SODataVO"/>
     <classEntry path="com.eray.base.core.ModuleComponent"/>
     <classEntry path="com.eray.base.core.IEXPModule"/>
     <classEntry path="com.eray.PipeAwareModule"/>
-    <classEntry path="com.eray.base.loader.EXPModuleLoader"/>
     <classEntry path="com.eray.base.data.EXPFileVO"/>
     <classEntry path="com.eray.base.utils.EXPGuid"/>
-    <classEntry path="com.eray.base.loader.IEXPCoreLoader"/>
+    <classEntry path="com.eray.base.net.loader.IEXPCoreLoader"/>
+    <classEntry path="ModuleUIHelper"/>
+    <classEntry path="com.eray.base.core.IEXPDispose"/>
+    <classEntry path="com.eray.data.UIDataVO"/>
+    <classEntry path="com.eray.response.UIResponse"/>
+    <classEntry path="com.eray.base.net.loader.EXPFileLoader"/>
+    <classEntry path="com.eray.response.DataResponse"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
