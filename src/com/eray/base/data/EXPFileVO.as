@@ -1,6 +1,7 @@
 package com.eray.base.data
 {
 	import com.eray.base.core.IEXPCore;
+	import com.eray.base.net.loader.EXPResponse;
 	import com.eray.base.utils.EXPGuid;
 	
 	public class EXPFileVO implements IEXPCore
@@ -16,6 +17,36 @@ package com.eray.base.data
 		}
 		private var _newThread:Boolean;
 		private var _fileType:int;
+
+		public function get error():EXPResponse
+		{
+			return _error;
+		}
+
+		public function set error(value:EXPResponse):void
+		{
+			_error = value;
+		}
+
+		public function get progress():EXPResponse
+		{
+			return _progress;
+		}
+
+		public function set progress(value:EXPResponse):void
+		{
+			_progress = value;
+		}
+
+		public function get success():EXPResponse
+		{
+			return _success;
+		}
+
+		public function set success(value:EXPResponse):void
+		{
+			_success = value;
+		}
 
 		public function get newThread():Boolean
 		{
@@ -80,55 +111,23 @@ package com.eray.base.data
 		private var _isRelease:Boolean;
 		private var _fileData:Object;
 		private var _cache:int
+		private var _success:EXPResponse;
+		private var _progress:EXPResponse;
+		private var _error:EXPResponse;
 		
-		public function get error():Function
-		{
-			return _error;
-		}
-		
-		public function set error(value:Function):void
-		{
-			_error = value;
-		}
-		
-		public function get success():Function
-		{
-			return _success;
-		}
-		
-		public function set success(value:Function):void
-		{
-			_success = value;
-		}
-		public function get onProgress():Function
-		{
-			return _onProgress;
-		}
-		
-		public function set onProgress(value:Function):void
-		{
-			_onProgress = value;
-		}
-		
-		private var _onProgress:Function;
-		private var _success:Function;
-		private var _error:Function;
 		
 		public function dispose():void
 		{
 			fileData = null;
-			onProgress = null;
-			success = null;
-			error = null;
 		}
-		public static function create(path:String,success:Function=null,progress:Function=null,error:Function=null,newThread:Boolean=false,cache:int = 1):EXPFileVO{
+		public static function create(path:String,success:EXPResponse=null,progress:EXPResponse=null,error:EXPResponse=null,newThread:Boolean=false,cache:int = 1):EXPFileVO{
 			var f:EXPFileVO = new EXPFileVO();
 			f.url = path;
 			f.cache = cache;
 			f.newThread = newThread;
 			f.success = success;
 			f.error = error;
-			f.onProgress = progress;
+			f.progress = progress;
 			return f;
 		}
 	}

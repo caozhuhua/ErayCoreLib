@@ -1,6 +1,7 @@
 package com.eray.base.net.loader
 {
 	import com.eray.base.data.EXPFileVO;
+	import com.eray.base.debug.Console;
 	import com.eray.response.DataResponse;
 	
 	import flash.events.EventDispatcher;
@@ -27,7 +28,7 @@ package com.eray.base.net.loader
 		public function load(fileInfo:EXPFileVO):void{
 			var fileData:Object = EXPFileLoader.getFileData(fileInfo);
 			if(fileData!=null){
-				fileInfo.success(fileInfo);
+				onLoad(fileInfo,fileData);
 			}else{
 				if(fileInfo.newThread){
 					
@@ -35,7 +36,18 @@ package com.eray.base.net.loader
 					fileInfoList.push(fileInfo);
 					startLoad();
 				}
-				
+			}
+		}
+		
+		private function onLoad(file:EXPFileVO,fileData:Object):void{
+			if (fileData == null) {
+				Console.log(file.url+ "error");
+				if(file.error!=null){
+					file.error.executeWith([file.url]);
+				}
+			}
+			if (file.success != null) {
+				file.success.executeWith([fileData]);
 			}
 		}
 		private function startLoad():void{
@@ -44,7 +56,7 @@ package com.eray.base.net.loader
 			}
 			if(fileInfoList.length>0){
 				var _fileInfo:EXPFileVO = fileInfoList.shift();
-				
+				loader.load(_fileInfo.url,_fileInfo.fileType,new EXPResponse(complete),_fileInfo.progress,_fileInfo.cache);
 			}
 			isLoading = true;
 		}
@@ -57,5 +69,9 @@ package com.eray.base.net.loader
 		public static function clearInstance():void{
 			_instance = null;
 		}
+		private function complete():void{
+			
+		}
+		
 	}
 }

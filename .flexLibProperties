@@ -32,6 +32,7 @@
     <classEntry path="com.eray.response.UIResponse"/>
     <classEntry path="com.eray.base.net.loader.EXPFileLoader"/>
     <classEntry path="com.eray.response.DataResponse"/>
+    <classEntry path="com.eray.base.net.loader.EXPResponse"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
